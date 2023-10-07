@@ -25,4 +25,4 @@ while True:
         print("Se ha presionado el boton derecho: ",cont)
         cont += 1
     pygame.display.update()
-    relojFPS.tick(10)
+    relojFPS.tick(30)

@@ -21,12 +21,18 @@ while True:
             exit()
         if event.type == pygame.KEYDOWN:
             print("Tecla presionada: ",event.type, "Tecla: ",event.key)
+            if event.key == pygame.K_s:
+                print("Tecla 's/S' apretada",pygame.K_a)
+                cRojo.posY += 10
+            if event.key == pygame.K_w:
+                print("Tecla 'w/W' apretada",pygame.K_q)
+                cRojo.posY -= 10
             if event.key == pygame.K_a:
                 print("Tecla 'a/A' apretada",pygame.K_a)
-                cRojo.posY += 10
-            if event.key == pygame.K_q:
-                print("Tecla 'q/Q' apretada",pygame.K_q)
-                cRojo.posY -= 10
+                cRojo.posX -= 10
+            if event.key == pygame.K_d:
+                print("Tecla 'd/D' apretada",pygame.K_q)
+                cRojo.posX += 10
         if event.type == pygame.KEYUP:
             print("Tecla liberada: ",event.type)
             
@@ -34,7 +40,7 @@ while True:
     xIni = 3
     yIni = 3
     #Actualizar posicion de los cuadrados
-    cRojo.posX = cRojo.posX + (xIni*cRojo.velx)
+    cRojo.posX = cRojo.posX *cRojo.velx
     cRojo.posY = (cRojo.posY*cRojo.vely)
     cRojo.comprobarL(400,400)
     pygame.display.update()
