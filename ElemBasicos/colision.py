@@ -63,7 +63,8 @@ while not salir:
         if (pos[1] - 20 < 50):
             print("Has colisionado")
             print(pos)
-            velocidad[0]*=-1
+            if(pos[0] -20 > 130):
+                velocidad[0]*=-1
             velocidad[1]*=-1
    #pygame.draw.rect(screen, (255, 0, 0),[20|, 40], 0)
     pygame.display.flip()
